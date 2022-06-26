@@ -7,17 +7,29 @@
     <x>0</x>
     <y>0</y>
     <width>754</width>
-    <height>600</height>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:black;
+}
+
+QLabel{
+	color:white;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
-      <widget class="QWidget" name="HomePage" native="true">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="HomePage">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item alignment="Qt::AlignRight">
          <widget class="QWidget" name="upButtons" native="true">
@@ -35,7 +47,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="closeBtn">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -47,6 +59,9 @@
                <width>50</width>
                <height>50</height>
               </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:Red;</string>
              </property>
              <property name="text">
               <string>Close</string>
@@ -60,7 +75,7 @@
          <widget class="QWidget" name="clockWidget" native="true">
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <widget class="QLabel" name="label_3">
+            <widget class="QLabel" name="day">
              <property name="font">
               <font>
                <pointsize>12</pointsize>
@@ -75,7 +90,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="hour">
              <property name="font">
               <font>
                <pointsize>100</pointsize>
@@ -90,7 +105,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="sec">
              <property name="font">
               <font>
                <pointsize>50</pointsize>
@@ -113,55 +128,16 @@
            <item>
             <widget class="QLabel" name="label_4">
              <property name="text">
-              <string>Logo</string>
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>ppp.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="buttonsWidget" native="true">
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <widget class="QPushButton" name="pushButton_4">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Settings</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
              </property>
             </widget>
            </item>
