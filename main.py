@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, uic
 from PyQt5.QtCore import QTimer, QTime, Qt
 import sys
 from datetime import datetime
+import random
 
 
 class Ui(QtWidgets.QMainWindow):
@@ -23,6 +24,12 @@ class Ui(QtWidgets.QMainWindow):
         self.showMaximized()
         self.showFullScreen()
 
+        self.colors =[
+            "#c0392b","#9b59b6","#8e44ad","#2980b9","#2874a6","#DFFF00",
+            "#6495ED","#CCCCFF","#ff0077","#79486b","#fa7f93","#66c8b0",
+            "#d2d1d0","#ffd966","#FFFFFF","#78ae00","#b12547","#2596be"
+        ]
+
 
         # self.setWindowFlag(Qt.FramelessWindowHint)
         # self.setAttribute(Qt.WA_TranslucentBackground)
@@ -39,6 +46,7 @@ class Ui(QtWidgets.QMainWindow):
         displayText = currentTime.toString("ss")
 
         self.sec.setText(displayText)
+        self.sec.setStyleSheet(f"color:{random.choice(self.colors)}")
 
     def displayDate(self):
         today = datetime.today().strftime("%A")
