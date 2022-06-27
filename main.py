@@ -20,8 +20,9 @@ class Ui(QtWidgets.QMainWindow):
 
         self.closeBtn.clicked.connect(sys.exit)
         # self.setWindowFlags(Qt.FramelessWindowHint)
-        self.showFullScreen()
         self.showMaximized()
+        self.showFullScreen()
+
 
         # self.setWindowFlag(Qt.FramelessWindowHint)
         # self.setAttribute(Qt.WA_TranslucentBackground)
