@@ -19,6 +19,12 @@ class Ui(QtWidgets.QMainWindow):
         timer.start(1000)
 
         self.closeBtn.clicked.connect(sys.exit)
+        # self.setWindowFlags(Qt.FramelessWindowHint)
+        self.showFullScreen()
+        self.showMaximized()
+
+        # self.setWindowFlag(Qt.FramelessWindowHint)
+        # self.setAttribute(Qt.WA_TranslucentBackground)
 
 
     def displayHour(self):
